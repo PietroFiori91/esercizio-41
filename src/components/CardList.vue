@@ -23,6 +23,21 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <div class="row row-cols-6">
+    <div class="col" v-for="card in cards" :key="cards.id">
+      <div class="card">
+        <img src="card.card_images" class="card-img-top" alt="" />
+        <div class="card-body">
+          <h5 class="card-title">{{ card.name }}</h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <a href="#" class="btn btn-secondary">btn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped></style>
