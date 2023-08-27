@@ -13,7 +13,7 @@ export default {
         "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0";
 
       axios.get(url).then((response) => {
-        this.cards = response.data.results;
+        this.cards = response.data.data;
       });
     },
   },
@@ -27,7 +27,9 @@ export default {
   <div class="row row-cols-6">
     <div class="col" v-for="card in cards" :key="cards.id">
       <div class="card">
-        <img src="card.card_images" class="card-img-top" alt="" />
+        <!-- BOOOO -->
+        <img :src="card.card_images[0].image_url" class="card-img-top" alt="" />
+        <!-- BOOOO -->
         <div class="card-body">
           <h5 class="card-title">{{ card.name }}</h5>
           <p class="card-text">
