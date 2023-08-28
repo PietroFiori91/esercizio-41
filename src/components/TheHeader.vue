@@ -1,9 +1,25 @@
 <script>
-export default {};
+import SearchBar from "./SearchBar.vue";
+export default {
+  components: { SearchBar },
+};
 </script>
 
 <template>
-  <header></header>
+  <header>
+    <div class="container">
+      <div class="d-flex pt-4 gap-5">
+        <img src="../assets/vue.svg" alt="" />
+        <h3 class="">YO-API</h3>
+      </div>
+    </div>
+  </header>
+  <SearchBar />
 </template>
 
-<style scoped></style>
+<style scoped>
+header {
+  background-color: aliceblue;
+  height: 100px;
+}
+</style>
